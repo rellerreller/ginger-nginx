@@ -1,0 +1,36 @@
+disk:
+  type: 'raw'
+  path: '../target/disk_deployment.raw'
+  size_mib: 512
+dirs:
+- path: '/usr/www'
+  uid: 10
+  permissions: 0o700
+  label: 'nginx_www'
+files:
+- source: 'init.yaml'
+  destination: '/usr/etc/init.yaml'
+  uid: 0
+  permissions: 0o400
+  label: 'init_config'
+- source: 'auditd.conf'
+  destination: '/usr/etc/auditd/auditd.conf'
+  uid: 0
+  gid: 1
+  permissions: 0o440
+  label: 'auditd_config'
+- source: 'auditd.rules'
+  destination: '/usr/etc/auditd/auditd.rules'
+  uid: 1
+  permissions: 0o400
+  label: 'auditd_rules'
+- source: 'nginx.conf'
+  destination: '/usr/etc/nginx.conf'
+  uid: 10
+  permissions: 0o400
+  label: 'nginx_config'
+- source: '../www/*'
+  destination: '/usr/www/'
+  uid: 10
+  permissions: 0o400
+  label: 'nginx_www'

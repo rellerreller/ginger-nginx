@@ -1,0 +1,19 @@
+disk:
+  type: 'raw'
+  path: '../target/disk_data.raw'
+  size_mib: 512
+dirs:
+- path: '/var/log/nginx'
+  uid: 10
+  permissions: 0o700
+  label: 'nginx_log'
+- path: '/var/lib'
+  uid: 10
+  permissions: 0o700
+  label: 'nginx_var_lib'
+- path: '/var/lib/nginx'
+  uid: 10
+  permissions: 0o700
+  label: 'nginx_lib'
+files:
+
