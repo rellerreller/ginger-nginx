@@ -1,6 +1,6 @@
-org_id="673e34dcf5fa0e5cfe6bfbd4"
-image_id="67aa39286318697a6350496f"
-server_id="67aa3974e2b315458f1e1636"
+org_id=""
+image_id=""
+server_id=""
 gingervm="/home/ubuntu/.ginger/bin/gingervm"
 
 echo "Creating the image version"
